@@ -2,7 +2,8 @@ const waterfallTrack = document.querySelector('.waterfall-track');
 const waterfall = document.getElementById('waterfall');
 
 const images = [
-  './public/images/20240319_182751.jpg'
+  './public/images/20240319_182751.jpg',
+  './public/images/20240407_131245.jpg',
 ];
 
 // Function to append images to waterfall container

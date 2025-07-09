@@ -1,11 +1,9 @@
 const waterfallTrack = document.querySelector('.waterfall-track');
 const waterfall = document.getElementById('waterfall');
 
-const modules = import.meta.glob('../public/images/*.{jpg,jpeg,png,webp,gif}', {
-  eager: true
-});
-
-const images = Object.values(modules).map(m => m.default);
+const images = [
+  '../public/images/20240319_182751.jpg'
+];
 
 // Function to append images to waterfall container
 function appendImages(imgList) {

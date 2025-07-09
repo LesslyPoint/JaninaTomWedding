@@ -561,6 +561,14 @@ p {
     grid-template-rows: repeat(11, 1fr);
   }
 
+  #form-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 0;
+  }
+
   /* Example: scale text */
   h1, h2 {
     font-size: 1.2rem;
@@ -630,6 +638,7 @@ p {
     text-align: center;
     line-height: 3rem;
   }
+
 }
 
 .hidden {

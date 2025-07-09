@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+    
+  <div class="parent">
+    <div class="div1">
+      <div class="waterfall-track">
+        <div class="waterfall" id="waterfall"></div>
+      </div>
+      <img src="./public/Title.png" class="overlay" alt="title">
+    </div>
+
+    <div class="div2">
+      <div id="cardLayout">
+        <img id="suittr" src="" alt="">
+        <h2 id="greet" data-i18n="Greeting">Welcome!</h2>
+        <h1 id="name" class="name animated-text">Janina Didio</h1>
+        <h2 id="cardID">Queen of Hearts</h2>
+        <img id="suitbl" src="" alt="">
+      </div>
+    </div>
+
+    <div class="div3">
+      <h1 class="animated-text" data-i18n="Married">We are getting Married!</h1>
+      <h2 class="target-date" id="targetDateDisplay" data-i18n="Date">Our Wedding Date: August 15, 2026</h2>
+      <div class="countdown">
+        <div class="time-section">
+          <div class="digit-group" id="days"></div>
+          <span data-i18n="Days">Days</span>                
+        </div>
+        <div class="time-section">
+          <div class="digit-group" id="hours"></div>
+          <span data-i18n="Hours">Hours</span>
+        </div>
+        <div class="time-section">
+          <div class="digit-group" id="minutes"></div>
+          <span data-i18n="Minutes">Minutes</span>
+        </div>
+        <div class="time-section">
+          <div class="digit-group" id="seconds"></div>
+          <span data-i18n="Seconds">Seconds</span>
+        </div>
+      </div>
+    </div>
+            
+    <div class="div4">
+      <div class="overlay-container">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+        <div id="map"></div>
+        <div class="overlay">
+          <a href="https://www.lacreperie.at" target="_blank" class="faderBG" data-i18n="Location">Wedding location:</a>
+          <h1 class="faderBG">La Crêperie</h1>
+          <p class="faderBG">An der Oberen Alten Donau 6,<br/>1210 Wien</p>
+        </div>
+      </div>
+    </div>
+            
+    <div class="div5">
+
+      <form id="questionForm">
+        <div id="form-container">
+          <h1 class="animated-text" id="questionaire" data-i18n="questions">We ask a few things of you;</h1>
+
+          <div class="bubble" id="prefLang">
+            <div class="language-selector">
+              <img src="https://flagcdn.com/w40/gb.png" alt="Switch to English" class="flag en" data-lang="en">
+              <img src="https://flagcdn.com/w40/at.png" alt="Wechsel zu Deutsch" class="flag at" data-lang="at">
+            </div>
+          </div>
+
+          <input type="hidden" id="id" name="id" />
+          <input type="hidden" id="guestname" name="guestname" />
+
+          <textarea class="bubble" id="plusOne" data-i18n-placeholder="plusOne" placeholder="Do you have a plus one?"></textarea>
+          <textarea class="bubble" id="songRec" data-i18n-placeholder="songRec" placeholder="Recommend a song for the playlist!"></textarea>
+          <textarea class="bubble" id="gameRec" data-i18n-placeholder="gameRec" placeholder="Recommend a game for our collection!"></textarea>
+          <textarea class="bubble" id="foodNeed" data-i18n-placeholder="foodNeed" placeholder="What food needs and preferences do you have?"></textarea>
+          <input class="bubble" type="hidden" id="playingCard" name="playingCard" />
+
+          <button class="bubble" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="div6">
+      <h1 class="call animated-text" data-i18n="call">These are our contacts, write us your RSVP!</h1>
+      <h2 data-i18n="call">Also, send us a photo of you!</h2>
+      <p class="email">Tom Email</p>
+      <p class="email">Janina Email</p>
+      <p class="email">Both Email</p>
+    </div>
+  </div>
+          
+  <script src="./src/CountDown.js"></script>
+  <script type="module" src="./src/waterfall.js"></script>
+  <script type="module" src="./src/map.js"></script>
+  <script type="module" src="./src/flag.js"></script>
+  <script type="module" src="./src/letters.js"></script>
+  <script type="module" src="./src/sheets.js"></script>
+</body>
+</html>

@@ -40,7 +40,6 @@ function applyTranslations(lang) {
         const key = el.getAttribute('data-i18n');
         el.textContent = translations[lang][key] || `[Missing translation: ${key}]`;
     });
-    
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
         el.setAttribute('placeholder', translations[lang][key] || '');

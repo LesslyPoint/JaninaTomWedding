@@ -85,9 +85,9 @@ function startFlick(digitEl) {
 
   const digitInner = digitEl.querySelector(".digit-inner");
   let rotation = 0;
-  const totalRotation = 360 * 6; // two full spins
+  const totalRotation = 360 * 3;
   let rotated = 0;
-  const spinSpeed = 60; // degrees per frame
+  const spinSpeed = 20; // degrees per frame
 
   function spinStep() {
     rotation = (rotation + spinSpeed);

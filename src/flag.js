@@ -2,7 +2,7 @@ const flags = document.querySelectorAll('.flag');
 
 const translations = {
 en: {
-    Greeting: "You are invited!",
+    Greeting: "The wedding of:",
     Married: "We are getting Married!",
     Date: "Our Wedding Date: August 15, 2026",
     Days: "Days",
@@ -18,7 +18,7 @@ en: {
     call: "These are our contacts, write us your RSVP!"
 },
 at: {
-    Greeting: "Du bist eingeladen!",
+    Greeting: "Die Hochzeit von:",
     Married: "Wir werden Heiraten!",
     Date: "Unser Hochzeitsdatum: August 15, 2026",
     Days: "Tage",

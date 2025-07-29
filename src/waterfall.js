@@ -2,7 +2,6 @@ const waterfallTrack = document.querySelector('.waterfall-track');
 const waterfall = document.getElementById('waterfall');
 
 const images = [
-  './public/images/0000.jpg',
   './public/images/0001.jpg',
   './public/images/0010.jpg',
   './public/images/0011.jpg',
@@ -23,8 +22,10 @@ const images = [
   './public/images/10010.jpg',
   './public/images/10011.jpg',
   './public/images/10100.jpg',
-  './public/images/10101.jpg',
+  './public/images/10101.jpg'
 ];
+
+console.log(waterfall.querySelectorAll('img').length); // should be 44
 
 // Function to append images to waterfall container
 function appendImages(imgList) {

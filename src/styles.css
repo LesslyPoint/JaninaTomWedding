@@ -148,28 +148,38 @@ p, textarea::placeholder {
 
 #suittr {
   grid-row: 1;
-  grid-column: 7;
+  grid-column: 1;
 }
 
 #suitbl {
   grid-row: 5;
-  grid-column: 1;
+  grid-column: 7;
   transform: rotate(180deg);
+}
+
+#suittr,
+#suitbl {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  align-self: start;
+  justify-self: center;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 #greet {
   grid-row: 2;
-  grid-column: 3 / span 3;
+  grid-column: 1 / span 7;
 }
 
 #name {
   grid-row: 3;
-  grid-column: 2 / span 5;
+  grid-column: 1 / span 7;
 }
 
 #cardID {
   grid-row: 4;
-  grid-column: 3 / span 3;
+  grid-column: 1 / span 7;
 }
 
 /* === DIV 3: Countdown === */
@@ -567,7 +577,7 @@ p, textarea::placeholder {
     grid-row: 6;
   } 
   
-  #gameRec {
+  #request {
     grid-column: span 5;
   }
 
@@ -580,6 +590,12 @@ p, textarea::placeholder {
     grid-column: 1 / span 2;
     grid-row: 2;
     min-height: 100px;
+    h2 {
+      font-size: 1rem
+    };
+    .flag.en {
+      top: 2.5rem;
+    };
   }
 
   #form-container button {

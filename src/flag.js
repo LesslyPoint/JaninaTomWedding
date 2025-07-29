@@ -13,24 +13,24 @@ en: {
     questions: "We ask a few things of you;",
     plusOne: "Do you have a Plus One?",
     songRec: "Recommend a song for the evening!",
-    gameRec: "Recommend a game for us!",
-    foodNeed: "What alergies and food preferences do you have?",
+    request: "Would you be able to help us with the preperations?",
+    foodNeed: "Do you have allergies, food intolerances or food preferences?",
     call: "These are our contacts, write us your RSVP!"
 },
 at: {
-    Greeting: "Sie sind Eingeladen!",
+    Greeting: "Du bist eingeladen!",
     Married: "Wir werden Heiraten!",
-    Date: "Unser Hochzeits Datum: August 15, 2026",
+    Date: "Unser Hochzeitsdatum: August 15, 2026",
     Days: "Tage",
     Hours: "Stunden",
     Minutes: "Minuten",
     Seconds: "Sekunden",
     Location: "Hochzeit Location:",
-    questions: "Wir würden ein paar sachen von sie fragen;",
-    plusOne: "Haben sie eine Plus Eins?",
-    songRec: "Emphele uns ein Lied!",
-    gameRec: "Emphele uns Ein Spiel!",
-    foodNeed: "Welche Alergien oder Essensbedurfnisse haben sie?",
+    questions: "Wir haben ein paar Fragen an dich;",
+    plusOne: "Wer kommt mit dir zur Hochzeit?",
+    songRec: "Welches Lied gehört auf die Playlist?",
+    request: "Kannst du uns bei den Vorbereitungen unterstützen?",
+    foodNeed: "Hast du Allergien, Lebensmittelunverträglichkeiten oder eine bevorzugte Ernährung?",
     call: "Unsere Kontakte, schreib uns eure RSVP!"
 }
 };

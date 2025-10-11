@@ -186,7 +186,7 @@ p, textarea::placeholder {
 /* === DIV 3: Countdown === */
 .div3 {
   grid-column: 6 / span 3;
-  grid-row: span 2;
+  grid-row: span 1;
   background: linear-gradient(135deg, var(--primary-bg-gradient-start), var(--primary-bg-gradient-end));
   color: var(--text-color);
   display: flex;

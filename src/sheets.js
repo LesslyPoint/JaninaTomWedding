@@ -28,7 +28,7 @@ document.getElementById('questionForm').addEventListener('submit', function (e) 
     data.append('name', document.getElementById('guestname').value);
     data.append('plusOne', document.getElementById('plusOne').value);
     data.append('songRec', document.getElementById('songRec').value);
-    data.append('gameRec', document.getElementById('gameRec').value);
+    data.append('request', document.getElementById('request').value);
     data.append('foodNeed', document.getElementById('foodNeed').value);
     data.append('playingCard', document.getElementById('playingCard').value);
 

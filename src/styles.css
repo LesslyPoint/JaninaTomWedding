@@ -49,6 +49,7 @@ p, textarea::placeholder {
   grid-template-rows: repeat(5, 1fr);
   gap: 8px;
   width: 90vw;
+  max-width: 18vh;
   height: 90vh;
 }
 

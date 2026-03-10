@@ -1,0 +1,236 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page styling */
+body {
+    font-family: 'Copperplate Gothic Light', serif;
+    color: #064635;
+    line-height: 1.6;
+    padding: 2rem;
+
+    background-color: #fafafa; /* base color */
+    /* subtle diagonal lines to simulate paper grain */
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            rgba(0,0,0,0.02) 0 1px,
+            transparent 1px 20px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            rgba(0,0,0,0.02) 0 1px,
+            transparent 1px 20px
+        );
+    background-size: auto;
+    background-attachment: fixed;
+}
+
+/* Main container: flex layout */
+.main {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 700px;
+    align-items: center;
+    justify-self: center;
+}
+
+/* Left and right columns */
+.main .left,
+.main .right {
+    flex: 1 1 300px;
+    box-sizing: border-box;
+}
+
+
+/* Language switch */
+.language-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+}
+
+.language-switch a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 5px;
+}
+
+.language-switch a:hover {
+    text-decoration: underline;
+}
+
+/* Section layout */
+.Section {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Headings */
+h1, h2 {
+    font-family: 'Edwardian Script ITC', cursive;
+    color: #232; /* deep green */
+    font-weight: 200;
+}
+p, h3 {
+    font-family: 'Copperplate Gothic Light', serif;
+    color: #232; /* deep green */
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 6.5rem;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 3.8rem;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 10px;
+}
+
+/* Center the intro section */
+#Heading {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* RSVP button */
+#Rsvp a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #343;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    width: 100%;
+}
+
+#Rsvp a:hover {
+    background-color: #575;
+}
+
+/* Registry link */
+#Registry a {
+    color: #343;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#Registry a:hover {
+    transform: scale(1.02);
+    color: #575;
+    text-decoration: underline;
+}
+
+/* Small screen adjustments */
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+}
+
+/* FAQ dropdowns */
+
+.faq-item details {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 15px;
+    background-color: white;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.faq-item summary:hover {
+    color: #575;
+}
+
+.faq-item p {
+    margin-top: 10px;
+}
+
+summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item details[open] p {
+    max-height: 500px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 1s ease, opacity 1s ease;
+}
+
+.faq-item details p {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 1s ease, opacity 1s ease;
+}
+
+
+/* Contact cards layout */
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-card button {
+    padding: 10px 16px;
+    border: none;
+    margin-top: 0.5rem;
+    background: #343;
+    font-family: 'Copperplate Gothic Light', serif;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-card button:hover {
+    background: #575;
+}

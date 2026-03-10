@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="language-switch">
+        <a href="../en/index.html">English</a> | 
+        <a href="../de/index.html">Deutsch</a>
+    </div>
+
+    <div class="" id="Heading">
+        <h1>We are getting married!</h1>
+        <p>We are very much looking forward to celebrating with you!</p>
+    </div>
+    <div class="main">
+        <div class="left">
+            <div class="Section" id="Date">
+                <h2 data-parallax-speed="-0.05">When?</h2>
+                <p>Date: 15/08/2026</p>
+            </div>
+            <div class="Section" id="Location">
+                <h2 data-parallax-speed="-0.05">Where?</h2>
+                <h3 data-parallax-speed="-0.02">Church</h3>
+                <p>Kalvarienbergkirche 3</p>
+                <h3 data-parallax-speed="-0.02">Agape</h3>
+                <p>BROT Haus</p>
+                <h3 data-parallax-speed="-0.02">Party</h3>
+                <p>La Creparie</p>
+            </div>
+        </div>
+        
+        <div class="right">
+            <div class="Section" id="Timeline">
+                <h2 data-parallax-speed="-0.05">When, but like, really when?</h2>
+                <h3 data-parallax-speed="-0.02">Church</h3>
+                <p>14:00</p>
+                <h3 data-parallax-speed="-0.02">Agape</h3>
+                <p>15:00</p>
+                <h3 data-parallax-speed="-0.02">Party</h3>
+                <p>18:00</p>
+            </div>
+            <div class="Section" id="Rsvp">
+                <a href="" data-parallax-speed="-0.075">RSVP Here!</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="Section" id="Registry">
+        <h2 data-parallax-speed="-0.04">Gifts</h2>
+        <a href="">Registry link here!</a>
+    </div>
+    
+    <div class="Section" id="FAQ">
+        <h2 data-parallax-speed="-0.03">FAQs</h2>
+        <div class="faq-item" data-parallax-speed="-0.01">
+            <details>
+                <summary>Can I bring a plus one?</summary>
+                <p>If your invitation includes a plus one, absolutely!</p>
+            </details>
+            <details>
+                <summary>Is there a dress code?</summary>
+                <p>Semi-formal attire recommended.</p>
+            </details>
+            <details>
+                <summary>Are kids invited?</summary>
+                <p>This will be an adults-only celebration.</p>
+            </details>
+        </div>
+    </div>
+
+    <div class="Section" id="Contacts">
+        <h2 data-parallax-speed="-0.02">Contacts</h2>
+
+        <div class="contact-container" data-parallax-speed="0.02">
+
+            <div class="contact-card">
+                <h3>Tom</h3>
+                <button onclick="copy('tombchinnery@gmail.com')" data-parallax-speed="-0.01">Copy Email</button>
+                <button onclick="copy('+436706501845')" data-parallax-speed="-0.01">Copy Number</button>
+            </div>
+
+            <div class="contact-card">
+                <h3>Janina</h3>
+                <button onclick="copy('janina@example.com')" data-parallax-speed="-0.01">Copy Email</button>
+                <button onclick="copy('+4367762365671')" data-parallax-speed="-0.01">Copy Number</button>
+            </div>
+
+            <div class="contact-card">
+                <h3>Both</h3>
+                <button onclick="copy('tjchinnery@gmail.com')" data-parallax-speed="-0.01">Copy Shared Email</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function copy(email) {
+            navigator.clipboard.writeText(email);
+            alert("Copied: " + email);
+        }
+    </script>
+
+    <script>
+        const parallaxElements = document.querySelectorAll('[data-parallax-speed]');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+
+            parallaxElements.forEach(el => {
+                const speed = parseFloat(el.dataset.parallaxSpeed);
+                // Apply vertical transform
+                el.style.transform = `translateY(${scrollY * speed}px)`;
+            });
+        });
+
+        const body = document.body;
+        const backgroundSpeed = 0.05;
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            body.style.backgroundPosition = `center ${-scrollY * backgroundSpeed}px`;
+        });
+    </script>
+    
+</body>
+</html>

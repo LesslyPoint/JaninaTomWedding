@@ -13,21 +13,16 @@ body {
     padding: 2rem;
 
     background-color: #fafafa; /* base color */
-    /* subtle diagonal lines to simulate paper grain */
-    background-image: 
-        repeating-linear-gradient(
-            45deg,
-            rgba(0,0,0,0.02) 0 1px,
-            transparent 1px 20px
-        ),
-        repeating-linear-gradient(
-            -45deg,
-            rgba(0,0,0,0.02) 0 1px,
-            transparent 1px 20px
-        );
     background-size: auto;
     background-attachment: fixed;
+    z-index: 1;
 }
+
+body > *:not(.images):not(.overlay) {
+    position: relative;
+    z-index: 1;
+}
+
 
 /* Main container: flex layout */
 .main {
@@ -51,9 +46,11 @@ body {
 /* Language switch */
 .language-switch {
     position: fixed;
+    width: 100%;
+    text-align: center;
     top: 20px;
-    right: 20px;
     font-size: 14px;
+    margin-bottom: 1rem;
 }
 
 .language-switch a {
@@ -111,6 +108,10 @@ p {
     margin-bottom: 4rem;
 }
 
+#Heading h1{
+    margin-bottom: -2rem;
+}
+
 /* RSVP button */
 #Rsvp a {
     display: inline-block;
@@ -150,7 +151,11 @@ p {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
     }
 
 }
@@ -165,7 +170,7 @@ p {
     background-color: white;
 }
 
-.faq-item summary {
+.faq-item summary, .faq-item h3{
     cursor: pointer;
     font-weight: bold;
     font-size: 1.1rem;
@@ -177,6 +182,22 @@ p {
 
 .faq-item p {
     margin-top: 10px;
+}
+
+.faq-item button{
+    padding: 10px 16px;
+    border: none;
+    margin-top: 0.5rem;
+    background: #575;
+    font-family: 'Copperplate Gothic Light', serif;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.faq-item button:hover{
+    background: #787;
 }
 
 summary {
@@ -223,7 +244,7 @@ summary::-webkit-details-marker {
     padding: 10px 16px;
     border: none;
     margin-top: 0.5rem;
-    background: #343;
+    background: #575;
     font-family: 'Copperplate Gothic Light', serif;
     color: white;
     border-radius: 6px;
@@ -232,5 +253,93 @@ summary::-webkit-details-marker {
 }
 
 .contact-card button:hover {
-    background: #575;
+    background: #787;
+}
+
+.images{
+    position: fixed;
+    top: 0;
+    width: 25vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.left-edge{
+    left: 0;
+}
+
+.right-edge{
+    right: 0;
+}
+
+.left-edge img{
+    position: absolute;
+    left: -40px;
+    max-width: 30vw;
+}
+
+.right-edge img{
+    position: absolute;
+    right: -40px;
+    transform: scaleX(-1);
+    max-width: 30vw;
+}
+
+.left-edge img:nth-child(1)  { top: 10vh;  width: 10vw;}
+.left-edge img:nth-child(2)  { top: 60vh;  width: 12vw;}
+.left-edge img:nth-child(3)  { top: 70vh;  width: 14vw;}
+.left-edge img:nth-child(4)  { top: 20vh;  width: 16vw;}
+.left-edge img:nth-child(5)  { top: 0vh;   width: 18vw;}
+.left-edge img:nth-child(6)  { top: 50vh;  width: 15vw;}
+.left-edge img:nth-child(7)  { top: 40vh;  width: 17vw;}
+.left-edge img:nth-child(8)  { top: 30vh;  width: 19vw;}
+.left-edge img:nth-child(9)  { top: -10vh; width: 21vw;}
+.left-edge img:nth-child(10) { top: 80vh;  width: 23vw;}
+.left-edge img:nth-child(11) { top: -20vh; width: 25vw;}
+
+.right-edge img:nth-child(1)  { top: 80vh;  width: 10vw;}
+.right-edge img:nth-child(2)  { top: 30vh;  width: 12vw;}
+.right-edge img:nth-child(3)  { top: 40vh;  width: 14vw;}
+.right-edge img:nth-child(4)  { top: -10vh; width: 16vw;}
+.right-edge img:nth-child(5)  { top: 0vh;   width: 18vw;}
+.right-edge img:nth-child(6)  { top: 20vh;  width: 15vw;}
+.right-edge img:nth-child(7)  { top: 60vh;  width: 17vw;}
+.right-edge img:nth-child(8)  { top: -20vh; width: 19vw;}
+.right-edge img:nth-child(9)  { top: 10vh;  width: 21vw;}
+.right-edge img:nth-child(10) { top: 70vh;  width: 23vw;}
+.right-edge img:nth-child(11) { top: 50vh;  width: 25vw;}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    opacity: 0;
+    z-index: 0;
+}
+
+@media (max-width: 1350px) {
+
+    .left-edge img{
+        position: absolute;
+        width: 60vw !important; 
+        max-width: none !important;
+        filter: blur(1px);
+        z-index: -1;
+    }
+
+    .right-edge img{
+        position: absolute;
+        width: 60vw !important;
+        max-width: none !important;
+        filter: blur(1px);
+        z-index: -1;
+    }
+
+    .overlay{
+        opacity: 90%;
+    }
 }

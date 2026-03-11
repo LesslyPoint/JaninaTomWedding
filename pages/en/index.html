@@ -8,14 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="language-switch">
         <a href="../en/index.html">English</a> | 
         <a href="../de/index.html">Deutsch</a>
     </div>
 
     <div class="" id="Heading">
-        <h1>We are getting married!</h1>
-        <p>We are very much looking forward to celebrating with you!</p>
+        <h1>Tom and Janina</h1>
+        <h2> are getting married!</h2>
+        <p>And we are very much looking forward to celebrating with you!</p>
     </div>
     <div class="main">
         <div class="left">
@@ -45,14 +47,14 @@
                 <p>18:00</p>
             </div>
             <div class="Section" id="Rsvp">
-                <a href="" data-parallax-speed="-0.075">RSVP Here!</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNCxtH284r3GJ16-QRRr9x-4WKdea6XDYVgUQQB02-jIwdDw/viewform?usp=header" data-parallax-speed="-0.075">RSVP Here!</a>
             </div>
         </div>
     </div>
 
     <div class="Section" id="Registry">
         <h2 data-parallax-speed="-0.04">Gifts</h2>
-        <a href="">Registry link here!</a>
+        <a href="">Registry link here soon!</a>
     </div>
     
     <div class="Section" id="FAQ">
@@ -60,7 +62,7 @@
         <div class="faq-item" data-parallax-speed="-0.01">
             <details>
                 <summary>Can I bring a plus one?</summary>
-                <p>If your invitation includes a plus one, absolutely!</p>
+                <p>Every invitation includes a plus one, absolutely!</p>
             </details>
             <details>
                 <summary>Is there a dress code?</summary>
@@ -68,7 +70,17 @@
             </details>
             <details>
                 <summary>Are kids invited?</summary>
-                <p>This will be an adults-only celebration.</p>
+                <p>Certainly! we have no issues with children.</p>
+            </details>
+            <details>
+                <summary>Who do I ask if I have other questions?</summary>
+                <p>Our wonderful friends and family have offered to help with many parts of this special day.</p>
+                <h3>For Agape questions</h3>
+                <button onclick="copy('me.didio@gmx.net')" data-parallax-speed="-0.01">Esther Didio (mother of the bride)</button>
+                <h3>For General "Vienna questions"</h3>
+                <button onclick="copy('')" data-parallax-speed="-0.01">Will soon be chosen!</button> <!--Tara Adams (Vienna expert)-->
+                <h3>For Games questions</h3>
+                <button onclick="copy('Will be added')" data-parallax-speed="-0.01">David Chinnery (brother of the groom)</button>
             </details>
         </div>
     </div>
@@ -97,6 +109,32 @@
 
         </div>
     </div>
+    <div class="images left-edge">
+        <img src="../img/Flower1.png" alt="Flowers" data-parallax-speed="-0.1">
+        <img src="../img/Flower2.png" alt="Flowers" data-parallax-speed="-0.15">
+        <img src="../img/Flower3.png" alt="Flowers" data-parallax-speed="-0.2">
+        <img src="../img/Flower4.png" alt="Flowers" data-parallax-speed="-0.25">
+        <img src="../img/Flower5.png" alt="Flowers" data-parallax-speed="-0.3">
+        <img src="../img/Flower6.png" alt="Flowers" data-parallax-speed="-0.35">
+        <img src="../img/Flower7.png" alt="Flowers" data-parallax-speed="-0.4">
+        <img src="../img/Flower8.png" alt="Flowers" data-parallax-speed="-0.45">
+        <img src="../img/Flower9.png" alt="Flowers" data-parallax-speed="-0.5">
+        <img src="../img/Flower10.png" alt="Flowers" data-parallax-speed="-0.55">
+        <img src="../img/Flower11.png" alt="Flowers" data-parallax-speed="-0.6">
+    </div>
+    <div class="images right-edge">
+        <img src="../img/Flower11.png" alt="Flowers" data-parallax-speed="-0.1">
+        <img src="../img/Flower20.png" alt="Flowers" data-parallax-speed="-0.15">
+        <img src="../img/Flower9.png" alt="Flowers" data-parallax-speed="-0.2">
+        <img src="../img/Flower8.png" alt="Flowers" data-parallax-speed="-0.25">
+        <img src="../img/Flower7.png" alt="Flowers" data-parallax-speed="-0.3">
+        <img src="../img/Flower6.png" alt="Flowers" data-parallax-speed="-0.35">
+        <img src="../img/Flower5.png" alt="Flowers" data-parallax-speed="-0.4">
+        <img src="../img/Flower4.png" alt="Flowers" data-parallax-speed="-0.45">
+        <img src="../img/Flower3.png" alt="Flowers" data-parallax-speed="-0.5">
+        <img src="../img/Flower2.png" alt="Flowers" data-parallax-speed="-0.55">
+        <img src="../img/Flower1.png" alt="Flowers" data-parallax-speed="-0.6">
+    </div>
 
     <script>
         function copy(email) {
@@ -106,26 +144,29 @@
     </script>
 
     <script>
-        const parallaxElements = document.querySelectorAll('[data-parallax-speed]');
+    const parallaxElements = document.querySelectorAll('[data-parallax-speed]');
 
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const isMobile = window.innerWidth <= 600; // mobile breakpoint
 
-            parallaxElements.forEach(el => {
-                const speed = parseFloat(el.dataset.parallaxSpeed);
-                // Apply vertical transform
-                el.style.transform = `translateY(${scrollY * speed}px)`;
-            });
+        parallaxElements.forEach(el => {
+            let speed = parseFloat(el.dataset.parallaxSpeed);
+
+            // slow down parallax on mobile
+            if (isMobile) speed *= 0.3; // 30% of original speed
+
+            const move = scrollY * speed;
+
+            // keep right-edge images mirrored
+            if (el.closest('.right-edge')) {
+                el.style.transform = `translateY(${move}px) scaleX(-1)`;
+            } else {
+                el.style.transform = `translateY(${move}px)`;
+            }
         });
-
-        const body = document.body;
-        const backgroundSpeed = 0.05;
-
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            body.style.backgroundPosition = `center ${-scrollY * backgroundSpeed}px`;
-        });
+    });
     </script>
-    
+        
 </body>
 </html>

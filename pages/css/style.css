@@ -338,7 +338,7 @@ summary::-webkit-details-marker {
         position: absolute;
         width: 60vw !important; 
         max-width: none !important;
-        filter: blur(3px);
+        filter: blur(1px);
         z-index: -1;
     }
 
@@ -346,11 +346,11 @@ summary::-webkit-details-marker {
         position: absolute;
         width: 60vw !important;
         max-width: none !important;
-        filter: blur(3px);
+        filter: blur(1px);
         z-index: -1;
     }
 
     .overlay{
-        opacity: 90%;
+        opacity: 85%;
     }
 }

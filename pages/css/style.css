@@ -80,12 +80,12 @@ body > *:not(.images):not(.overlay) {
 
 /* Headings */
 h1, h2 {
-    font-family: 'Edwardian Script ITC', cursive;
+    font-family: 'Edwardian Script ITC', 'Great Vibes', cursive;
     color: #232; /* deep green */
     font-weight: 200;
 }
 p, h3 {
-    font-family: 'Copperplate Gothic Light', serif;
+    font-family: 'Copperplate Gothic Light', 'Cinzel', serif;
     color: #232; /* deep green */
     font-weight: 100;
 }

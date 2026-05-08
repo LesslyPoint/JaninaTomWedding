@@ -3,21 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wedding</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="language-switch">
         <a href="../en/index.html">English</a> | 
-        <a href="../de/index.html">German</a>
+        <a href="../de/index.html">Deutsch</a>
     </div>
 
-    <div class="Section" id="Heading"></div>
-    <div class="Section" id="Date"></div>
-    <div class="Section" id="Location"></div>
-    <div class="Section" id="Timeline"></div>
-    <div class="Section" id="Rsvp"></div>
-    <div class="Section" id="Registry"></div>
-    <div class="Section" id="FAQ"></div>
-    <div class="Section" id="Contacts"></div>
+    <div class="" id="Heading">
+        <h1>Tom und Janina</h1>
+        <h2>Wir heiraten!</h2>
+        <p>Und wir freuen uns sehr darauf mit euch zu feiern!</p>
+    </div>
+    <div class="main">
+        <div class="left">
+            <div class="Section" id="Date">
+                <h2 data-parallax-speed="-0.05">Datum</h2>
+                <p>15. August</p>
+                <p>2026</p>
+            </div>
+            <div class="Section" id="Location">
+                <h2 data-parallax-speed="-0.05">Wo?</h2>
+                <h3 data-parallax-speed="-0.02">Kirche</h3>
+                <p>Kalvarienbergkirche Sankt-Bartolomäus-Platz 3</p>
+                <h3 data-parallax-speed="-0.02">Agape</h3>
+                <p>BROT Haus</p>
+                <p>Geblergasse 78</p>
+                <h3 data-parallax-speed="-0.02">Party</h3>
+                <p>La Creperie</p>
+                <p>An der Oberen Alten Donau 6</p>
+            </div>
+        </div>
+        
+        <div class="right">
+            <div class="Section" id="Timeline">
+                <h2 data-parallax-speed="-0.05">Tagesablauf</h2>
+                <h3 data-parallax-speed="-0.02">Kirche</h3>
+                <p> Die kirchliche Trauung startet um</p>
+                <p>14:00</p>
+                <h3 data-parallax-speed="-0.02">Agape</h3>
+                <p>Erfrischungen und Beglückwünschungen beginnen um</p>
+                <p>15:00</p>
+                <p>Und werden andauern bis alle Hände geschüttelt wurden.</p>
+                <h3 data-parallax-speed="-0.02">Party</h3>
+                <p>Die weitere Feier beginnt schließlich um</p>
+                <p>18:00</p>
+                <p>Und wird einige Zeit später enden.</p>
+            </div>
+            <div class="Section" id="Rsvp">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNCxtH284r3GJ16-QRRr9x-4WKdea6XDYVgUQQB02-jIwdDw/viewform?usp=header" data-parallax-speed="-0.075">Bitte meldet euch hier an!</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="Section" id="Registry">
+        <h2 data-parallax-speed="-0.04">Geschenke</h2>
+        <a href="">Der Link zu unserer Wunschliste kommt bald!</a>
+    </div>
+    
+    <div class="Section" id="FAQ">
+        <h2 data-parallax-speed="-0.03">FAQs</h2>
+        <div class="faq-item" data-parallax-speed="-0.01">
+            <details>
+                <summary>Kann ich jemanden mitnehmen?</summary>
+                <p>Ja gerne, aber dies bitte bekannt geben!</p>
+            </details>
+            <details>
+                <summary>Gibt es einen Dresscode?</summary>
+                <p>Festliche sommerliche Kleidung wäre angemessen.</p>
+            </details>
+            <details>
+                <summary>Können Kinder mitkommen?</summary>
+                <p>Gerne, aber auch dies bekannt geben.</p>
+            </details>
+            <details>
+                <summary>Wie kann ich unterstützen?</summary>
+                <p> Unsere wundervollen Familien und Freunde haben angeboten uns bei vielen verschiedenen Aspekten dieses besonderen Tages zu unterstützen. Wenn du auch mithelfen willst kannst du dich bei den unten angegebenen Kontaktdaten melden!</p>
+                <h3>Für die Agape</h3>
+                <p>Wir würden uns über Hilfe bei der Vorbereitung von Kuchen, Deko und Erfrischungen freuen. Janina's Mutter hilft uns dabei die Agape zu organisieren.</p>
+                <button onclick="copy('me.didio@gmx.net')" data-parallax-speed="-0.01">Esther Didio (Mutter der Braut)</button>
+                <h3>Für Spiele und Programm</h3>
+                <p>Wir beide lieben Spiele und würden uns über eure Teilnahme dabei freuen. Dafür könnt ihr David, Tom's Bruder kontaktieren.</p>
+                <button onclick="copy('Will be added')" data-parallax-speed="-0.01">David Chinnery (Bruder des Bräutigams)</button>
+            </details>
+        </div>
+    </div>
+
+    <div class="Section" id="Contacts">
+        <h2 data-parallax-speed="-0.02">Kontaktdaten</h2>
+
+        <div class="contact-container" data-parallax-speed="0.02">
+
+            <div class="contact-card">
+                <h3>Tom</h3>
+                <button onclick="copy('tombchinnery@gmail.com')" data-parallax-speed="-0.01">Copy Email</button>
+                <button onclick="copy('+436706501845')" data-parallax-speed="-0.01">Copy Nummer</button>
+            </div>
+
+            <div class="contact-card">
+                <h3>Janina</h3>
+                <button onclick="copy('didiojanina@gmail.com')" data-parallax-speed="-0.01">Copy Email</button>
+                <button onclick="copy('+4367762365671')" data-parallax-speed="-0.01">Copy Nummer</button>
+            </div>
+
+            <div class="contact-card">
+                <h3>Beide</h3>
+                <button onclick="copy('tjchinnery@gmail.com')" data-parallax-speed="-0.01">Copy gemeinsamen Email</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="images left-edge">
+        <img src="../img/Flower1.png" alt="Flowers" data-parallax-speed="-0.1">
+        <img src="../img/Flower2.png" alt="Flowers" data-parallax-speed="-0.15">
+        <img src="../img/Flower3.png" alt="Flowers" data-parallax-speed="-0.2">
+        <img src="../img/Flower11.png" alt="Flowers" data-parallax-speed="-0.25">
+        <img src="../img/Flower5.png" alt="Flowers" data-parallax-speed="-0.3">
+        <img src="../img/Flower6.png" alt="Flowers" data-parallax-speed="-0.35">
+        <img src="../img/Flower7.png" alt="Flowers" data-parallax-speed="-0.4">
+        <img src="../img/Flower8.png" alt="Flowers" data-parallax-speed="-0.45">
+        <img src="../img/Flower9.png" alt="Flowers" data-parallax-speed="-0.5">
+        <img src="../img/Flower10.png" alt="Flowers" data-parallax-speed="-0.55">
+        <img src="../img/Flower4.png" alt="Flowers" data-parallax-speed="-0.6">
+    </div>
+    <div class="images right-edge">
+        <img src="../img/Flower11.png" alt="Flowers" data-parallax-speed="-0.1">
+        <img src="../img/Flower20.png" alt="Flowers" data-parallax-speed="-0.15">
+        <img src="../img/Flower9.png" alt="Flowers" data-parallax-speed="-0.2">
+        <img src="../img/Flower8.png" alt="Flowers" data-parallax-speed="-0.25">
+        <img src="../img/Flower7.png" alt="Flowers" data-parallax-speed="-0.3">
+        <img src="../img/Flower6.png" alt="Flowers" data-parallax-speed="-0.35">
+        <img src="../img/Flower5.png" alt="Flowers" data-parallax-speed="-0.4">
+        <img src="../img/Flower4.png" alt="Flowers" data-parallax-speed="-0.45">
+        <img src="../img/Flower3.png" alt="Flowers" data-parallax-speed="-0.5">
+        <img src="../img/Flower2.png" alt="Flowers" data-parallax-speed="-0.55">
+        <img src="../img/Flower1.png" alt="Flowers" data-parallax-speed="-0.6">
+    </div>
+
+    <script>
+        function copy(email) {
+            navigator.clipboard.writeText(email);
+            alert("Copied: " + email);
+        }
+    </script>
+
+    <script>
+    const parallaxElements = document.querySelectorAll('[data-parallax-speed]');
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const isMobile = window.innerWidth <= 600; // mobile breakpoint
+
+        parallaxElements.forEach(el => {
+            let speed = parseFloat(el.dataset.parallaxSpeed);
+
+            // slow down parallax on mobile
+            if (isMobile) speed *= 0.3; // 30% of original speed
+
+            const move = scrollY * speed;
+
+            // keep right-edge images mirrored
+            if (el.closest('.right-edge')) {
+                el.style.transform = `translateY(${move}px) scaleX(-1)`;
+            } else {
+                el.style.transform = `translateY(${move}px)`;
+            }
+        });
+    });
+    </script>
+
 </body>
 </html>
